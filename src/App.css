@@ -1,0 +1,251 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.App-header {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #388E3C;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.App-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.button-container, .join-game-container, .create-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-container input, .join-game-container input, .create-game-container input {
+    margin-bottom: 10px;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #388E3C, #4CAF50);
+}
+
+.copyBtn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, #af754c, #81C784);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.copyBtn:hover {
+    background: linear-gradient(to right, #4cafaf, #81C784);
+}
+
+.shareBtn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, #af4caa, hsl(249, 53%, 71%));
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.shareBtn:hover {
+    background: linear-gradient(to right, #af754c, #81C784);
+}
+.card {
+    background-color: orange;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    background-color: darkorange;
+}
+
+.countdown-container,
+.timer {
+    font-size: 24px;
+    margin: 20px;
+    color: #FF5722;
+    font-weight: bold;
+}
+
+.drawing-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.leaderboard {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.leaderboard h2 {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leaderboard li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.leaderboard li::before {
+    content: url('./assets/images/icon.png');
+    margin-right: 10px;
+}
+
+.App-footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #777;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.create-game-card, .join-game-card {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+@keyframes countdown {
+    0% { width: 100%; background-color: green; }
+    50% { background-color: yellow; }
+    100% { width: 0%; background-color: red; }
+  }
+  
+  .timer-bar {
+    height: 20px;
+    background-color: green;
+    animation: countdown linear;
+    animation-duration: var(--duration);
+  }
+
+  .position-relative {
+    position: relative;
+}
+
+.overlay-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.alert-primary {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.create-game-card, .join-game-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.create-game-card:hover, .join-game-card:hover {
+    transform: scale(1.05);
+}
+
+.leaderboard-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
